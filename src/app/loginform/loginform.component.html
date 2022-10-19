@@ -1,0 +1,42 @@
+<p>loginform works!</p>
+<div class="container-fluid">
+<div class="row">
+<div class="col-10 border mx-auto">
+<form [formGroup]="sampleForm">
+    <div class="form-group">
+    <label for="uname">username</label>
+    <input type="text"  id="u_name" class="form-control" formControlName="username">
+</div>
+<div class="form-group">
+    <label for="pwd">password</label>
+    <input type="text" id="Pwd" class="form-control">
+</div>
+<div class="form-group">
+    <label for="cpwd">confirmpassword</label>
+    <input type="text" id="cpwd" class="form-control">
+</div>
+<div class="form-group">
+    <label for="zcode">zipcode</label>
+    <input type="text" id="z_code" class="form-control">
+</div><br>
+<button class="btn btn-primary">Submit</button>
+<br><br>
+<hr>
+<div class="validations" *ngIf="sampleForm.touched">
+    <span *ngIf="sampleForm.controls['username'].invalid"><i class="fa fa-times-circle" style="color:firebrick "></i>username should be 3 characters minimum</span>
+
+    <!-- <span><i class="fa fa-times-circle" style="color:firebrick "></i>password and confirmpassword should not be Empty and should match</span> -->
+
+    <!-- <span><i class="fa fa-times-circle" style="color:firebrick "></i>zipcode should be only 6 numerical characters</span> -->
+    
+      
+</div>
+</form>
+<ul class="fa-ul">
+    <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+    <li><i class="fa-li fa fa-spinner fa-spin"></i>List icons</li>
+    <li><i class="fa-li fa fa-square"></i>List icons</li>
+  </ul>
+</div>
+</div>
+</div>

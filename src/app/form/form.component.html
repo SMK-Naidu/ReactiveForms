@@ -1,0 +1,33 @@
+<p>form works!</p>
+<!-- <div formGroupName="address">
+    <h2>Address</h2>
+  <div class="form-group mt-3">
+    <label for="street">Street: </label>
+    <input id="street" type="text" formControlName="street"></div>
+  <div class="form-group mt-3">
+    <label for="city">City: </label>
+    <input id="city" type="text" formControlName="city"></div>
+  <div class="form-group mt-3">
+    <label for="state">State: </label>
+    <input id="state" type="text" formControlName="state"></div>
+  <div class="form-group mt-3">
+    <label for="zip">Zip Code: </label>
+    <input id="zip" type="text" formControlName="zip"></div><br>
+    <button class="btn btn-info">Submit</button>
+  </div> -->
+  <h1></h1>
+  <form [formGroup]="addLoanTypesForm">
+ <div class="form-group">
+  <label>Loan Name</label>
+  <input type="text" formControlName="loanName">
+</div><br>
+<div class="form-group">
+  <label>Loan Type</label>
+  <input type="text" formControlName="loanType">
+</div><br>
+<div class="form-group">
+  <label>Loan Description</label>
+  <textarea formControlName="loanDescription"></textarea>
+</div>
+<button (click)="addLoanType()" [disabled]="!addLoanTypesForm.valid">add Loan Type</button>
+  </form>
